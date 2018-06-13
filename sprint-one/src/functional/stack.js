@@ -1,5 +1,4 @@
 var Stack = function() {
-  // someInstance will hold the last pushed or popped key/value
   var someInstance = {};
 
   // Use an object with numeric keys to store values
