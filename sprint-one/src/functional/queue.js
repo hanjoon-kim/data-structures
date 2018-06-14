@@ -1,12 +1,9 @@
 var Queue = function() {
   var someInstance = {};
-
-  // Use an object with numeric keys to store values
   var storage = {};
-
   var last = 1;
   var first = 1
-  // Implement the methods below
+
   someInstance.enqueue = function(value) {
     someInstance[last] = value;
     storage = JSON.parse(JSON.stringify(someInstance));
@@ -19,7 +16,7 @@ var Queue = function() {
       delete someInstance[first]
       first++;
       return storage[first -1];
-    }
+    };
   };
 
   someInstance.size = function() {

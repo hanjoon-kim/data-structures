@@ -4,26 +4,17 @@ var Stack = function() {
     key: 1
   };
 
-  
-// var extend = function(obj, methods) {
-//     for (var key in methods) {
-//         obj[key] = methods[key]
-//     }
-// }
   _.extend(someInstance,stackMethods);
   
   return someInstance;
-
 };
 
 var stackMethods = {
-
   push: function(value) {
     this[this.key] = value;
     this.storage = JSON.parse(JSON.stringify(this));
     this.key++;
   },
-
   pop: function() {
     if (this.size() > 0) {
       this.storage = JSON.parse(JSON.stringify(this));
@@ -32,7 +23,6 @@ var stackMethods = {
       return this.storage[this.key];
     }
   },
-
   size: function() {
     return this.key - 1;
   }

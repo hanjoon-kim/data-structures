@@ -16,9 +16,9 @@ Stack.prototype.pop = function() {
     delete this[this.key];
     this.key--;
     return this.storage[this.key];
-  }
+  };
 };
 
 Stack.prototype.size = function() {
   return this.key - 1;
-}
+};
