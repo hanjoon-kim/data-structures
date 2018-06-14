@@ -13,11 +13,11 @@ Queue.prototype.enqueue = function(value) {
 
 Queue.prototype.dequeue = function() {
   if (this.size() > 0) {
-  this.storage = JSON.parse(JSON.stringify(this));
-  delete this[this.first]
-  this.first++;
-  return this.storage[this.first -1];
-  };
+    this.storage = JSON.parse(JSON.stringify(this));
+    delete this[this.first];
+    this.first++;
+    return this.storage[this.first - 1];
+  }
 };
 
 Queue.prototype.size = function () {

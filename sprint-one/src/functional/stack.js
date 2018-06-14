@@ -15,7 +15,7 @@ var Stack = function() {
       delete someInstance[key];
       key--;
       return storage[key];
-    };
+    }
   };
 
   someInstance.size = function() {

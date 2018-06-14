@@ -4,7 +4,7 @@ var Stack = function() {
     key: 1
   };
 
-  _.extend(someInstance,stackMethods);
+  _.extend(someInstance, stackMethods);
   
   return someInstance;
 };
@@ -27,5 +27,3 @@ var stackMethods = {
     return this.key - 1;
   }
 };
-
-

@@ -19,9 +19,9 @@ var queueMethods = {
   dequeue: function() {
     if (this.size() > 0) {
       this.storage = JSON.parse(JSON.stringify(this));
-      delete this[this.first]
+      delete this[this.first];
       this.first++;
-      return this.storage[this.first -1];
+      return this.storage[this.first - 1];
     }
   },
   size: function() {
