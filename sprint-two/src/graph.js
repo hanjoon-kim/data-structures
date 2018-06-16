@@ -78,6 +78,8 @@ Graph.prototype.forEachNode = function(cb) {
 
 /*
  * Complexity: What is the time complexity of the above functions?
+   Add node is O(1)
+   Everything is O(n)
  */
 
 

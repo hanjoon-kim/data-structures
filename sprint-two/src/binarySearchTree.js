@@ -69,4 +69,6 @@ class BinarySearchTree {
 
 /*
  * Complexity: What is the time complexity of the above functions?
+   Everything is O(n)
+   Can rebalance to make it O(1).
  */
