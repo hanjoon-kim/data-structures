@@ -51,5 +51,14 @@ describe('linkedList', function() {
     expect(linkedList.contains(4)).to.equal(false);
   });
 
+  it('should accept two lists of same value', function() {
+    linkedList.addToTail(4);
+    linkedList.addToTail(5);
+    linkedList.addToTail(4);
+    expect(linkedList.head.value).to.equal(4);
+    expect(linkedList.tail.value).to.equal(4);
+  });
+
+
   // add more tests here to test the functionality of linkedList
 });
