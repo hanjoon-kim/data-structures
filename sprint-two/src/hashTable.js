@@ -13,16 +13,14 @@ HashTable.prototype.insert = function(k, v) {
   if (!Array.isArray(innerArray)) {
     this._storage.set(index, []);
   }
-
   if (Array.isArray(innerArray)) {
-    for (let i = 0; i < innerArray.length; i++) {
-      if (innerArray[i][0] === k) {
-        innerArray[i][1] = v;
+    innerArray.forEach(elem => {
+      if (elem[0] === k) {
+        elem[1] = v;
         return;
       }
-    }
+    });
   }
-  
   this._storage.get(index).push([...arguments]);
 };
 
@@ -31,15 +29,17 @@ HashTable.prototype.retrieve = function(k) {
   //check if key is equal to 
   var innerArray = this._storage.get(index);
   //pass the key into the storage(limited array) and get the value;
+  var val;
+
   if (Array.isArray(innerArray)) {
-    for (let i = 0; i < innerArray.length; i++) {
-      if (innerArray[i][0] === k) {
-        return innerArray[i][1];
+    innerArray.forEach(elem => {
+      if (elem[0] === k) {
+        val =  elem[1];
       }
-    }
+    });
   }
   
-  
+  return val;
 };
 
 HashTable.prototype.remove = function(k) {
